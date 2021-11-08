@@ -1,0 +1,81 @@
+.pollutions-dashboard {
+  height: 4rem;
+  align-items: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  animation: pollution 1.5s;
+}
+
+.pollutions-list {
+  padding: 30px 0;
+  animation: pollution 1.5s;
+
+  .aqi {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    align-items: center;
+    height: 75px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .chart-wrapper {
+    height: 350px;
+    width: 100%;
+    position: relative;
+
+      & > div {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+  }
+}
+
+@keyframes pollution {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .pollutions-list {
+    font-size: 14px;
+
+    .aqi {
+      margin: 10px;
+      padding: 0 10px;
+      height: 165px;
+
+      br {
+        display: block;
+      }
+    }
+
+    .chart-wrapper {
+      height: 250px;
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .pollutions-list {
+    .chart-wrapper {
+      height: 200px;
+    }
+  }
+}
+

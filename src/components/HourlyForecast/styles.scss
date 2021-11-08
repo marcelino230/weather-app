@@ -1,0 +1,46 @@
+.forecast-container {
+  display: flex;
+  text-align: center;
+  height: 240px;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 4px;
+
+  .hour-item-wrapper {
+    flex: 1;
+  }
+}
+
+.forecast {
+  margin: 0 auto;
+  padding: 10px 20px !important;
+  border-radius: 20px;
+  box-shadow: -2px -2px 5px var(--color-white), 2px 2px 5px var(--color-shadow) !important;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+@media (max-width: 767px) {
+  .forecast-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .hour-item-wrapper {
+      width: 100%;
+      flex: inherit;
+    }
+  }
+
+  .button-wrapper {
+    padding: 10px;
+
+    button {
+      padding: 10px;
+    }
+  }
+}
